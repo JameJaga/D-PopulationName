@@ -9,13 +9,13 @@ async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
 @client.event
-async def discord.on_group_join(channel, user):
+async def on_member_join(member):
     name = "ジャガの部屋"
     population = member_count
     Gname = name + pupulation
     guild = client.get_guild(662153006787199046)
     await guild.edit(name=Gname)
-async def discord.on_group_remove(channel, user):
+async def on_member_remove(member):
     name = "ジャガの部屋"
     population = member_count
     Gname = name + pupulation
