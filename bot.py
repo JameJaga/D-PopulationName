@@ -12,8 +12,8 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     name = "ジャガの部屋"
-    population = member_count
-    Gname = name + pupulation
+    member_count(population)
+    Gname = name + "　　Over" + pupulation + "　Member")
     guild = client.get_guild(662153006787199046)
     await guild.edit(name=Gname)
 async def on_member_remove(member):
