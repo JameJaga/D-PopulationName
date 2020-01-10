@@ -1,6 +1,8 @@
 import discord
 import os
+import sys
 
+GuildName = str(sys.path)
 TOKEN = os.environ.get("DISCORD_TOKEN")
 
 client = discord.Client()
