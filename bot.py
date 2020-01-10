@@ -4,6 +4,7 @@ import os
 TOKEN = os.environ.get("DISCORD_TOKEN")
 
 client = discord.Client()
+pupulation = 0
 
 @client.event
 async def on_ready():
@@ -15,7 +16,8 @@ async def on_message(message):
     guild = client.get_guild('662153006787199046')
     #population = len(guild.members)
     #メモ
-    population = discord.Guild.member_count
+
+    pupulation = discord.Guild.member_count
     GuildName = NameBase + pupulation + 'Members'
     await guild.edit(name=GuildName)
 client.run(TOKEN)
