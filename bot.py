@@ -2,7 +2,6 @@ import discord
 import os
 import sys
 
-GuildName = str(sys.path)
 TOKEN = os.environ.get("DISCORD_TOKEN")
 
 client = discord.Client()
@@ -14,7 +13,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    guild = client.get_guild('662153006787199046')
+    guild = client.get_guild(662153006787199046)
     #population = len(guild.members)
     #メモ
 
