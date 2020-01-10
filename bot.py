@@ -12,8 +12,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
     NameBase = 'ジャガの部屋'
-    population = guild.member_count
+    guild = client.get_guild('662153006787199046')
+    population = len(guild.members)
+    #メモ
+    #population = guild.member_count
     GuildName = NameBase + pupulation + 'Members'
-    guild = client.get_guild(662153006787199046)
     await guild.edit(name=GuildName)
 client.run(TOKEN)
