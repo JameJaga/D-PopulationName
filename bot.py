@@ -18,6 +18,6 @@ async def on_message(message):
     #メモ
 
    #num = guild.member_count
-    GuildName = 'ジャガの部屋' + '+ str(num) + ' + 'Members'
+    GuildName = 'ジャガの部屋' + ('+ str(n_time) + ')' + 'Members'
     await guild.edit(name=GuildName)
 client.run(TOKEN)
