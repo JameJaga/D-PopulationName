@@ -15,7 +15,7 @@ async def on_message(message):
     guild = client.get_guild('662153006787199046')
     #population = len(guild.members)
     #メモ
-    population = guild.member_count
+    population = discord.Guild.member_count
     GuildName = NameBase + pupulation + 'Members'
     await guild.edit(name=GuildName)
 client.run(TOKEN)
