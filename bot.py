@@ -61,7 +61,7 @@ async def on_message(message):
     await VoiceChannel.edit(name=ChannelName)
     
     #Region
-    ChannelName = 'Region:' + Region
+    ChannelName = f'Region:{str(Region)}'
     VoiceChannel = client.get_channel(665387642925613066)
     await VoiceChannel.edit(name=ChannelName)
     
