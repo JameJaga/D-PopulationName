@@ -17,10 +17,6 @@ async def on_message(message):
             
     guild = client.get_guild(662153006787199046)
     num = len(guild.members)
-    #メモ
-
-   #num = guild.member_count
-    GuildName = 'ジャガの部屋　＋' + '('+ str(num) + ')' + 'Members'
-    guildname = f'ジャガの部屋　＋{str(num)}Members'
+    GuildName = f'ジャガの部屋　＋{str(num)}Members'
     await guild.edit(name=GuildName)
 client.run(TOKEN)
