@@ -18,6 +18,8 @@ async def on_message(message):
     ChannelName = f'Members:{str(member_count)}'
     VoiceChannel = client.get_channel(665387061750136841)
     await VoiceChannel.edit(name=ChannelName)
+    VoiceChannel = client.get_channel(665387771736621056)
+    await VoiceChannel.edit(name=ChannelName)
     user_count = sum(1 for member in guild.members if not member.bot)
     ChannelName = f'Humans:{str(user_count)}'
     VoiceChannel = client.get_channel(665387186660573206)
