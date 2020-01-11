@@ -46,7 +46,7 @@ async def on_message(message):
     await VoiceChannel.edit(name=ChannelName) 
     
     #ボイスチャンネル数
-    ChannelName = f'VoiceChannels:{str(TextC_count)}'
+    ChannelName = f'VoiceChannels:{str(VoiceC_count)}'
     VoiceChannel = client.get_channel(665387575963549741)
     await VoiceChannel.edit(name=ChannelName)
     
