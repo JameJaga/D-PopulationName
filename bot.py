@@ -2,7 +2,6 @@ import discord
 import os
 
 TOKEN = os.environ.get("DISCORD_TOKEN")
-PrintChannelID = 662153006787199046
 
 client = discord.Client()
 #データベース
