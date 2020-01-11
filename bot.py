@@ -4,7 +4,6 @@ import os
 TOKEN = os.environ.get("DISCORD_TOKEN")
 
 client = discord.Client()
-#データベース
 num = 0
 
 @client.event
@@ -12,17 +11,9 @@ async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
 @client.event
-async def on_message(message):
-            
-    guild = client.get_guild(662153006787199046)
-    
-    
-    
+async def on_message(message):            
     from discord.ext import commands
-
-    def __init__(self, bot):
-        self.bot = bot
-    guild = ctx.guild   
+    guild = message.guild
     member_count = guild.member_count   
     ChannelName = f'Members:{str(member_count)}'
     VoiceChannel = client.get_channel(665387061750136841)
