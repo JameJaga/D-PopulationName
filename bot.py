@@ -1,6 +1,5 @@
 import discord
 import os
-import sys
 
 TOKEN = os.environ.get("DISCORD_TOKEN")
 PrintChannelID = 662153006787199046
