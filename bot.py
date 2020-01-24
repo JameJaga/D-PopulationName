@@ -68,4 +68,23 @@ async def on_message(message):
     num = len(guild.members)
     GuildName = f'ジャガの部屋 ＋{str(num)}Members'
     await guild.edit(name=GuildName)
+    
+    guild = client.get_guild(サーバーID)
+    
+    #全チャンネルのメッセージ数を加算。
+    msg_count = 0
+
+    for channel in guild.text_channels:
+    msgs = await channel.history(limit=None).flatten()
+    msg_count += len(msgs)
+    #ここで出力
+    ChannelName = f'Messages:{str(msg_count)}'
+    VoiceChannel = client.get_channel(665387824471736320)
+    await VoiceChannel.edit(name=ChannelName)
+    #こっちクローズの方。
+    ChannelName = f'Messages:{str(msg_count)}'
+    VoiceChannel = client.get_channel(665387351928995842)
+    await VoiceChannel.edit(name=ChannelName)
+    
+    
 client.run(TOKEN)
