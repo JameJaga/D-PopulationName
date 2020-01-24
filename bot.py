@@ -75,8 +75,8 @@ async def on_message(message):
     msg_count = 0
 
     for channel in guild.text_channels:
-    msgs = await channel.history(limit=None).flatten()
-    msg_count += len(msgs)
+        msgs = await channel.history(limit=None).flatten()
+        msg_count += len(msgs)
     #ここで出力
     ChannelName = f'Messages:{str(msg_count)}'
     VoiceChannel = client.get_channel(665387824471736320)
