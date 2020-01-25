@@ -69,7 +69,7 @@ async def on_message(message):
     GuildName = f'ジャガの部屋 ＋{str(num)}Members'
     await guild.edit(name=GuildName)
     
-    guild = client.get_guild(サーバーID)
+    guild = client.get_guild(662153006787199046)
     
     #全チャンネルのメッセージ数を加算。
     msg_count = 0
