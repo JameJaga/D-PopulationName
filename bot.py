@@ -13,7 +13,7 @@ async def on_ready():
 @client.event
 async def on_message(message):            
     from discord.ext import commands
-    guild = client.message.guild
+    guild = message.guild
     member_count = guild.member_count 
     user_count = sum(1 for member in guild.members if not member.bot)
     bot_count = sum(1 for member in guild.members if member.bot)  
